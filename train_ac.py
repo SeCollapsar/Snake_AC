@@ -14,7 +14,7 @@ agent = ActorCriticAgent(net)
 
 logger = ACLogger()
 
-episodes = 5000
+episodes = Config.EPISODES
 best_reward = -1e9
 
 

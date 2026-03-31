@@ -26,9 +26,9 @@ class ActorCriticAgent:
         assert np.isscalar(value), "value must be scalar"
         assert np.isscalar(next_value), "next_value must be scalar"
 
-        target = reward + (0 if done else self.gamma * next_value)
+        td_target = reward + (0 if done else self.gamma * next_value)
 
-        td_error = target - value
+        td_error = td_target - value
 
         # ---------- Critic ----------
         dvalue = td_error

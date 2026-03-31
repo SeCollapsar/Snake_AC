@@ -14,12 +14,12 @@ class Config:
     MAX_STEPS_WITHOUT_FOOD = 150
 
     # ---------- 奖励 ----------
-    REWARD_DEATH = -30
-    REWARD_EAT = 10
+    REWARD_DEATH = -50
+    REWARD_EAT = 15
     REWARD_WIN = 50
     REWARD_STEP = -0.01
     REWARD_DISTANCE_FACTOR = 0.1
-    REWARD_REPEAT_PENALTY = -0.05
+    REWARD_REPEAT_PENALTY = -0.1
 
     # ---------- 其他 ----------
     EPSILON = 0.02
