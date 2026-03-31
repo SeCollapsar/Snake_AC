@@ -35,7 +35,7 @@ class SnakeWindow(QWidget):
 
     def game_step(self):
 
-        probs, _ = self.policy.forward(self.state)
+        probs, *_ = self.policy.forward(self.state)
 
         action = np.argmax(probs)
 
@@ -92,7 +92,7 @@ class SnakeWindow(QWidget):
         painter.drawText(10, 20, f"Score: {score}")
 
         # ---------- 概率 ----------
-        probs, _ = self.policy.forward(self.state)
+        probs, *_ = self.policy.forward(self.state)
 
         painter.drawText(10, 40, f"Up:    {probs[0]:.2f}")
         painter.drawText(10, 60, f"Down:  {probs[1]:.2f}")

@@ -145,7 +145,7 @@ class ACNetwork:
             print(f"[AC REMOVE WORST] {worst_file}")
 
         # ---------- 保存 ----------
-        time_str = datetime.now().strftime("%Y%m%d_%H%M%S")
+        time_str = datetime.now().strftime("%d%m%Y_%H%M%S")
 
         filename = f"policy_{grid}_{score:.2f}_{time_str}.npy"
 
